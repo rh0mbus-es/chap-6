@@ -1,51 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>chapter 6 haiku</title>
-	<link rel="stylesheet" href="./assets/css/styles.css">
-	<style>
-		body{
-			margin: 1rem;
-			background-color: black;
-			background: url(flames.gif) no-repeat center/cover;
-			color: whitesmoke;
-			font-size: 5rem;
-			overflow: hidden;
-		}
-		.grid-container {
-			display:grid;
-			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-			gap: 2rem;
-			margin: 15% 4rem 0 4rem;
-		}
-		.last{
-			padding-bottom: 2rem;
-			border-bottom: 2px solid rgb(220,200,180);
-		}
-		html{
-			width: 100%;
-			height: 100%;
-		}
-	</style>
-</head>
-<body>
-	<div class="grid-container">
-		<div>A</div>
-		<div>radiant</div>
-		<div class="last">young</div>
-		<div>woman</div>
-		<div>to</div>
-		<div>light</div>
-		<div>the</div>
-		<div class="last">darkest</div>
-		<div>corners</div>
-		<div>of</div>
-		<div class="last">winter</div>
-	</div>
-	
-	<img src="assets/img/cat.jpg" alt="" style="max-width: 32rem;">
+  <head>
+    <meta charset="utf-8" />
+    <title>chapter 6 haiku</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      body {
+        margin: 1rem;
+        background-color: black;
+        background: url(flames.gif) no-repeat center/cover;
+        color: whitesmoke;
+        font-size: 5rem;
+        overflow: hidden;
+		transition-property: transform;
+		transition-duration: 3s;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin: 15% 4rem 0 4rem;
+      }
+      .last {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgb(220, 200, 180);
+      }
+      html {
+        width: 100%;
+        height: 100%;
+      }
+	 
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div>A</div>
+      <div>radiant</div>
+      <div class="last">young</div>
+      <div>woman</div>
+      <div>to</div>
+      <div>light</div>
+      <div>the</div>
+      <div class="last">darkest</div>
+      <div>corners</div>
+      <div>of</div>
+      <div class="last">winter</div>
+    </div>
 
-	<script src="./assets/js/main.js"></script>
-</body>
+    <img src="assets/img/cat.jpg" alt="" style="max-width: 32rem" />
+
+    <script src="./assets/js/main.js"></script>
+	<script>
+		let rotation = 0;
+		setInterval(function(){
+			rotation += 5;		
+			document.body.style.transform = 'rotate(${rotation}deg)';
+		}, 100);
+
+	</script>
+  </body>
 </html>
